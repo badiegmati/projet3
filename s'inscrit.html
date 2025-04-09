@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="">
+    <title>inscrit</title>
+    <link rel="stylesheet" href="Styles/styles1.css">
+</head>
+<script src="Script/script_S.js"></script>
+<style>
+    .lo{
+        position:relative;
+        width:20%;
+        color: #fff;
+        padding: 35px;
+        background: transparent;
+        border: 2px solid rgba(255, 255, 255, 0.5);
+        border-radius: 20px;
+        backdrop-filter: blur(55px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem 3rem;
+        transition: transform 0.3s;
+        box-shadow: 3px 3px 3px 3px purple;
+        transition: all 0.5s ease;
+        margin: 0 auto;
+        margin-top: 130px;
+    }
+    section h1 {
+        margin-bottom: 20px;
+        font-size: 36px;
+        text-align: center;
+        color: aqua;
+    }
+.inputbox label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 1rem;
+    pointer-events: none;
+    transition: all 0.5s ease-in-out;
+}
+.inputbox{
+    position: relative;
+    margin: 30px 0;
+    max-width: 310px;
+    border-bottom: 2px solid #fff;
+}
+.inputbox label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 1rem;
+    pointer-events: none;
+    transition: all 0.5s ease-in-out;
+}
+input:focus ~ label,
+input:valid ~ label{
+    top: -5px;
+}
+.inputbox input{
+    width: 70%;
+    height: 30px;
+    color: #000;
+    background: transparent;
+    backdrop-filter: blur(55px);
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding: 0 35px 0 5px;
+}
+.inputbox ion-icon{
+    position: absolute;
+    right: 8px;
+    color: #fff;
+    font-size: 1.2rem;
+    top: 20px;
+}
+.button{
+width: 100%;
+height: 40px;
+border-radius: 40px;
+background-color: #007bff;
+border: none;
+outline: none;
+cursor: pointer;
+font-size: 1rem;
+font-weight: 600;
+transition: all 0.4s ease;
+
+}
+button:hover {
+background-color: rgb(225, 255,255, 0.5);;
+}
+.register{
+    font-size: 0.9rem;
+    color: #fff;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+.register p a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}
+.register p a{
+    text-decoration: underline;
+}
+body {
+    background: url("Image/2.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+</style>
+<body onsubmit="return verif_S()">
+    <header>
+        <div class="logo">
+            <img src="Image/15.jpg" alt="Hotel Logo" height="70">
+        </div>
+        <nav class="navbar">
+            <a href="S'inscrit.html">Compte</a>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contacter.html">Contact</a>
+        </nav>
+    </header>
+    <section class="lo">
+        <form action="Inscrit.php" method="post">
+            <h1>Login</h1>
+            <div class="inputbox">
+                <ion-icon name="mail-outline"></ion-icon>
+                <input type="text" required id="cin" name="cin">
+                <label for="">Cin</label>
+            </div>
+            <div class="inputbox">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <input type="text" required id="np" name="np">
+                <label for="">Non & Prenom</label>
+            </div>
+            <input type="submit" value="inscrit" class="button">
+            <div class="register">
+                <p>Déjà inscrit ? <a href="compte.php">Se connecter</a></p>
+            </div>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2025 HotelBooking. All rights reserved.</p>
+    </footer>
+</body>
+</html>

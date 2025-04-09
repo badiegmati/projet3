@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="">
+    <title>Reservation</title>
+    <link rel="stylesheet" href="Styles/styles1.css">
+</head>
+<script src="Script/script_R.js"></script>
+<style>
+    body {
+    background:url("Image/2.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+    .reservation-form {
+
+        color: #fff;
+        padding: 35px;
+        width: 30%;
+        margin: 50px;
+        background: transparent;
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
+        overflow: hidden;
+        transition: transform 0.3s;
+        box-shadow: 3px 3px 3px 3px purple;
+        transform:translate(80%);
+        margin-top: 130px;
+    }
+    .reservation-form h1 {
+        margin-bottom: 20px;
+        font-size: 32px;
+        text-align: center;
+        color: aqua;
+    }
+    .reservation-form label {
+        display: block;
+        margin-bottom: 6px;
+        font-weight: bold;
+    }
+    .reservation-form .input_box{
+        width: 90%;
+        height: 20px;
+        padding: 8px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+    }
+    .input_box{
+        padding: 8px;
+        margin-bottom: 15px;
+        background: transparent;
+        border: none;
+        outline: none;
+        border: 1px solid #ccc;
+        border-radius: 40px;
+        color: black;
+        font-weight: bold;
+    }
+    .s{
+        width: 90%;
+        height: 35px;
+        padding: 8px;
+        margin-bottom: 15px;
+        background: transparent;
+        border: none;
+        outline: none;
+        color: black;
+        font-weight: bold;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 40px;
+    }
+    .input_box::placeholder{
+        color: black;
+        font-weight: bold;
+    }
+    .reservation-form input[type="submit"] {
+        width: 50%;
+        padding: 10px;
+        background-color: #007bff;
+        border: none;
+        border-radius: 20px;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+        margin-left: 110px;
+    }
+    .reservation-form input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+</style>
+<body onsubmit="return verif_R()">
+    <header>
+        <div class="logo">
+            <img src="Image/15.jpg" alt="Hotel Logo" height="70">
+        </div>
+        <nav class="navbar">
+            <a href="S'inscrit.html">Compte</a>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contacter.html">Contact</a>
+        </nav>
+    </header>
+    <div class="reservation-form">
+        <h1>Reservation</h1>
+        <form action="Reservation.php" method="post">
+            <label for="name">cin :</label>
+            <input type="text" id="cin" class="input_box" name="cin" placeholder="donner  votre cin">
+            <label for="np">Nom & prenom :</label>
+            <input type="text" id="np" class="input_box" name="np" placeholder="donner  votre nom & prenom" >
+
+            <label for="email">Email :</label>
+            <input type="email" id="email" class="input_box" name="email" placeholder="donner  votre Email">
+
+            <label for="people">Nombre de personnes :</label>
+            <input type="number" id="num" class="input_box" name="num" min="1" placeholder="donner  votre Nombre">
+
+            <label for="arrival">Date d'arrivée :</label>
+            <input type="date" id="date_A" class="input_box" name="date_A" >
+
+            <label for="departure">Date de sortie :</label>
+            <input type="date" id="date_S" class="input_box" name="date_S" >
+
+            <label for="hotel">Choisir un hôtel :</label>
+            <select id="hotel" class="s" name="hotel" required>
+                <option value="">Sélectionnez un hôtel</option>
+                <option value="Royal Azur Hotel Thalassa">Royal Azur Hotel Thalassa</option>
+                <option value="Hotel Royal Jiinene">Hotel Royal Jiinene</option>
+                <option value="Mahdia Beach & Aquapark">Mahdia Beach & Aquapark</option>
+                <option value="The Residence Douz">The Residence Douz</option>
+                <option value="Le Petit Palais & Spa">Le Petit Palais & Spa</option>
+                <option value="La Cigale">La Cigale</option>
+            </select>
+
+            <input type="submit" value="Réserver">
+        </form>
+    </div>
+    <footer>
+        <p>&copy; 2025 HotelBooking. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="">
+    <title>inscrit</title>
+    <link rel="stylesheet" href="Styles/styles1.css">
+</head>
+<script src="Script/script_S.js"></script>
+<style>
+    .lo{
+        position:relative;
+        width:20%;
+        color: #fff;
+        padding: 35px;
+        background: transparent;
+        border: 2px solid rgba(255, 255, 255, 0.5);
+        border-radius: 20px;
+        backdrop-filter: blur(55px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem 3rem;
+        transition: transform 0.3s;
+        box-shadow: 3px 3px 3px 3px purple;
+        transition: all 0.5s ease;
+        margin: 0 auto;
+        margin-top: 130px;
+    }
+    section h1 {
+        margin-bottom: 20px;
+        font-size: 36px;
+        text-align: center;
+        color: aqua;
+    }
+.inputbox label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 1rem;
+    pointer-events: none;
+    transition: all 0.5s ease-in-out;
+}
+.inputbox{
+    position: relative;
+    margin: 30px 0;
+    max-width: 310px;
+    border-bottom: 2px solid #fff;
+}
+.inputbox label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 1rem;
+    pointer-events: none;
+    transition: all 0.5s ease-in-out;
+}
+input:focus ~ label,
+input:valid ~ label{
+    top: -5px;
+}
+.inputbox input{
+    margin-top:20px ;
+    width: 70%;
+    height: 30px;
+    color: #000;
+    background: transparent;
+    backdrop-filter: blur(55px);
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding: 0 35px 0 5px;
+}
+.inputbox ion-icon{
+    position: absolute;
+    right: 8px;
+    color: #fff;
+    font-size: 1.2rem;
+    top: 20px;
+}
+.button{
+margin-top: 30px;
+width: 100%;
+height: 35px;
+border-radius: 40px;
+background-color: #007bff;
+border: none;
+outline: none;
+cursor: pointer;
+font-size: 1rem;
+font-weight: 600;
+transition: all 0.4s ease;
+
+}
+button:hover {
+background-color: rgb(225, 255,255, 0.5);;
+}
+.register{
+    font-size: 0.9rem;
+    color: #fff;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+.register p a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}
+.register p a{
+    text-decoration: underline;
+}
+body {
+    background: url("Image/2.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+/* Style de base pour le select */
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    max-width: 400px;
+    padding: 12px 40px 12px 15px;
+    font-size: 16px;
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%234E0250' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 20px;
+}
+
+/* Style au survol */
+select:hover {
+    border-color: #4E0250;
+    box-shadow: 0 4px 8px rgba(78, 2, 80, 0.1);
+}
+
+/* Style quand l'élément est focus */
+select:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+}
+
+/* Style pour les options */
+select option {
+    padding: 10px;
+    background: #fff;
+    color: #333;
+}
+
+select option:hover {
+    background-color: #4E0250;
+    color: white;
+}
+
+/* Style pour les groupes d'options */
+optgroup {
+    font-weight: bold;
+    color: #4E0250;
+    background: #f0f0f0;
+}
+
+/* Style pour le select désactivé */
+select:disabled {
+    background-color: #f5f5f5;
+    color: #999;
+    cursor: not-allowed;
+}
+
+/* Version alternative avec flèche personnalisée */
+.select-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+}
+
+.select-container::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #4E0250;
+    pointer-events: none;
+    transition: transform 0.3s ease;
+}
+
+.select-container:hover::after {
+    border-top-color: #4a90e2;
+    transform: translateY(-50%) rotate(180deg);
+}
+
+</style>
+<body onsubmit="return verif_S()">
+    <header>
+        <div class="logo">
+            <img src="Image/15.jpg" alt="Hotel Logo" height="70">
+        </div>
+        <nav class="navbar">
+            <a href="S'inscrit.html">Compte</a>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contacter.html">Contact</a>
+        </nav>
+    </header>
+    <section class="lo">
+        <form action="Annuler.php" method="post">
+            <h1>Annuler</h1>
+            <div class="inputbox">
+                <ion-icon name="mail-outline"></ion-icon>
+                <input type="text" required id="cin" name="cin">
+                <label for="">Cin</label>
+            </div>
+            <div class="inputbox">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <input type="text" required id="np" name="np">
+                <label for="">Non & Prenom</label>
+            </div>
+            <div class="inputbox">
+                <select id="hotel" class="select" name="hotel" required>
+                    <option value="">Sélectionnez un hôtel</option>
+                    <option value="Royal Azur Hotel Thalassa">Royal Azur Hotel Thalassa</option>
+                    <option value="Hotel Royal Jiinene">Hotel Royal Jiinene</option>
+                    <option value="Mahdia Beach & Aquapark">Mahdia Beach & Aquapark</option>
+                    <option value="The Residence Douz">The Residence Douz</option>
+                    <option value="Le Petit Palais & Spa">Le Petit Palais & Spa</option>
+                    <option value="La Cigale">La Cigale</option>
+                </select>
+            </div>
+            <input type="submit" value="Annuler" class="button">
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2025 HotelBooking. All rights reserved.</p>
+    </footer>
+</body>
+</html>

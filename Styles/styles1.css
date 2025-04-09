@@ -1,0 +1,210 @@
+
+body {
+    background:url("Image/2.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+section {
+    padding: 20px;
+    margin-top: 100px;
+    text-align: center;
+}
+header{
+    position: fixed;
+    left: 0;
+    top: 0;
+    color: white;
+    width: 100%;
+    padding: 10px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background-color:#4E0250;
+}
+.navbar a{
+    display: inline-block;
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+    transition: .3s;
+    margin-right: 50px;
+    border:2px solid black;
+    border-radius: 5px;
+    width: 110px;
+    font-weight: bold;
+    background-color:grey;
+    transition: transform 0.3s;
+    text-align: center;
+}
+.navbar a:hover {
+    transform: scale(1.05);
+    color: #4a90e2;
+    text-shadow: purple 1px 0 10px;
+}
+
+.navbar a .btn {
+    background: #f39c12;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+.navbar a .btn:hover {
+    background: #e67e22;
+}
+.logo {
+    margin-right: 30px;
+}
+.typing-effect {
+    width: 32ch;
+    color: #4ecdc4;
+    color: #000;
+    font-size: 2rem;
+    font-weight: bold;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid;
+    font-family: monospace;
+    animation: typing 3s steps(15),blink 0.5s step-end infinite;
+}
+@keyframes typing {
+    from { width: 0 }
+    
+}
+@keyframes blink {
+    50% { border-color: transparent }
+}
+
+.hotel-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 30px;
+}
+
+.hotel-card {
+    background: white;
+    width: 350px;
+    
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s;
+    box-shadow: 3px 3px 3px 3px purple;
+}
+
+.hotel-card:hover {
+    transform: scale(1.05);
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-container img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.discount-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #e74c3c;
+    color: white;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 50%;
+}
+
+.hotel-details {
+    padding: 15px;
+}
+
+.hotel-details h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.stars {
+    color: #f39c12;
+}
+
+.location {
+    color: #666;
+    font-size: 14px;
+}
+
+.offer {
+    font-size: 13px;
+    margin-top: 10px;
+    color: #27ae60;
+}
+
+.price {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.amount {
+    font-size: 22px;
+    color: #000;
+}
+
+.currency {
+    font-size: 14px;
+}
+
+.btn {
+    display: block;
+    background: #f39c12;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #e67e22;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    color: white;
+    margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+    .client-container {
+        flex-direction: column;
+    }
+
+    .client-info, .client-images {
+        width: 100%;
+    }
+
+    .navbar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .navbar a {
+        margin: 5px 10px;
+    }
+}
+
+
+

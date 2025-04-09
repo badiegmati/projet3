@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="Styles/styles1.css">
+</head>
+<style>
+body {
+    background:url("Image/2.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 500px;
+    background: white;
+    padding: 35px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    width: 50%;
+    margin-left: 30%;
+    margin-top: 130px;
+}
+
+h1 {
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+label {
+    font-weight: bold;
+    text-align: left;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+button {
+    width: 50%;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 125px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+</style>
+<body>
+    <header>
+        <div class="logo">
+            <img src="Image/15.jpg" alt="Hotel Logo" height="70">
+        </div>
+        <nav class="navbar">
+            <a href="S'inscrit.html">Compte</a>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contacter.html">Contact</a>
+        </nav>
+    </header>
+            <div class="container">
+                <h1>Contact Us</h1>
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <label for="name">Nom & Prenom :</label>
+                    <input type="hidden" name="access_key" value="9576e73c-52be-44a8-936a-038a1163937a">
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email :</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="number">Numero :</label>
+                    <input type="number" id="number" name="number" required>
+
+                    <label for="message">Message :</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+    <footer>
+        <p>&copy; 2025 HotelBooking. All rights reserved.</p>
+    </footer>
+</body>
+</html>
