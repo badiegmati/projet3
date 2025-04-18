@@ -260,11 +260,11 @@ body {
                         </div>
                     <?php elseif (isset($client['Hotel']) && $client['Hotel'] === "Mahdia Beach & Aquapark"): ?>
                         <div class="client-images">
-                            <img src="Image/hotel3_1.jpg" alt="Royal Azur Hotel Thalassa">
-                            <img src="Image/hotel3_2.jpg" alt="Royal Azur Hotel Thalassa">
-                            <img src="Image/hotel3_3.jpg" alt="Royal Azur Hotel Thalassa">
-                            <img src="Image/hotel3_4.jpg" alt="Royal Azur Hotel Thalassa">
-                            <img src="Image/hotel3_5.jpg" alt="Royal Azur Hotel Thalassa">
+                            <img src="Image/hotel3_1.jpeg" alt="Royal Azur Hotel Thalassa">
+                            <img src="Image/hotel3_2.jpeg" alt="Royal Azur Hotel Thalassa">
+                            <img src="Image/hotel3_3.jpeg" alt="Royal Azur Hotel Thalassa">
+                            <img src="Image/hotel3_4.jpeg" alt="Royal Azur Hotel Thalassa">
+                            <img src="Image/hotel3_5.jpeg" alt="Royal Azur Hotel Thalassa">
                         </div>
                     <?php elseif (isset($client['Hotel']) && $client['Hotel'] === "The Residence Douz"): ?>
                         <div class="client-images">
